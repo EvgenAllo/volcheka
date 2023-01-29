@@ -1,0 +1,59 @@
+/*Ниже общий код для индивидуальных страниц с продукцией*/
+
+.item {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  column-gap: 30px;
+  margin-bottom: 32px;
+}
+
+.item__image {
+  width: 320px;
+  object-fit: cover;
+}
+
+.item__name {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  margin-bottom: 12px;
+  color: #cf5600;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.item__overview {
+  display: block;
+  margin-bottom: 24px;
+}
+
+.item__info {
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+.item__info_price {
+  margin-right: 48px;
+}
+
+@media screen and (max-width: 768px) {
+  .item {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    margin-bottom: 48px;
+  }
+
+  .item__image {
+    margin-bottom: 24px;
+  }
+
+  .item__name {
+    justify-content: center;
+  }
+
+  .item__info {
+    justify-content: center;
+  }
+}

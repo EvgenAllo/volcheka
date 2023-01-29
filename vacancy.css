@@ -1,0 +1,72 @@
+.vacancy {
+  display: grid;
+  align-items: start;
+  justify-items: center;
+  grid-template: minmax(120px, auto) 1fr / 1fr 40%;
+  grid-template-areas:
+    "vacancy__banner vacancy__banner"
+    "vacancy__info vacancy__image";
+  grid-gap: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .vacancy {
+    grid-template-areas:
+      "vacancy__banner vacancy__banner"
+      "vacancy__info vacancy__info"
+      "vacancy__image vacancy__image";
+  }
+
+  .vacancy__info {
+    text-align: center;
+  }
+}
+
+.vacancy__banner {
+  grid-area: vacancy__banner;
+  width: 100%;
+  background: #ff6c04;
+  text-align: center;
+  padding: 2rem 0.5rem;
+  margin-top: 24px;
+  box-sizing: border-box;
+}
+
+.vacancy__banner a {
+  color: white;
+  text-decoration: none;
+}
+
+.vacancy__info {
+  grid-area: vacancy__info;
+  font-weight: 500;
+  font-size: 2.5rem;
+  font-family: "Oswald", sans-serif;
+  color: #0a0909;
+  text-decoration: none;
+  line-height: 120%;
+}
+
+.vacancy__info a {
+  cursor: pointer;
+  color: #0a0909;
+  font-size: 2.5rem;
+}
+
+.vacancy__contacts {
+  margin-top: 60px;
+  margin-bottom: 12px;
+  font-size: 2.5rem;
+}
+
+.vacancy__image {
+  grid-area: vacancy__image;
+}
+
+.vacancy__image img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
